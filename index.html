@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <title>
+        Hobbies
+    </title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: purple;
+            font-size: 30px;
+            margin-top: 20px;
+            color: yellow;
+        }
+
+        #Sort {
+            display: none;
+            margin: 20px;
+            background-color: yellow;
+            color: purple;
+            font-size: 25px;
+        }
+        #Sub {
+            margin: 20px;
+            background-color: yellow;
+            color: purple;
+            font-size: 25px;
+        }
+        input{
+            background-color: yellow;
+            color: purple;
+            text-align: center;
+            font-size: 25px;
+            margin: 25px;
+        }
+        button {
+            height: 30px;
+            background-color: yellow;
+            color: purple;
+            font-size: 25px;
+        }
+    </style>
+    <center>
+        <h1 style="font-size: 40px; color: yellow;">
+            Hobbies
+        </h1>
+        <div id="LOH">
+	
+        </div>
+        
+        <button onclick="run()">List of Hobbies</button>
+        
+        <div>
+            <span>Add New Hobby</span>
+            <input type="text" placeholder="Add New Hobby" id="new_hobby">
+        </div>
+        
+        <button onclick="add_new_hobby()">Add New Hobby</button>
+        
+        </center>
+        <script>
+var LOH = ["Singing",
+"Painting", "Learning to play new Musical Instruments", "Coding", "Writing", "Dancing", "Baking", "Cooking"];
+var new_hobby;
+
+function run()
+{
+    document.getElementById("LOH").innerHTML = LOH;
+}
+
+function add_new_hobby()
+{
+    new_hobby = document.getElementById("new_hobby").value;
+    LOH.push(new_hobby);
+    LOH.sort();
+    document.getElementById("LOH").innerHTML = LOH;
+}
+
+        </script>
+        </body>
+        </html>
